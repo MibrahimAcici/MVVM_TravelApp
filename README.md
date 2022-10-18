@@ -1,2 +1,2 @@
-Patika Kotlin Bootcamp Bitirme Projesi
+Patika Android Kotlin Bootcamp Bitirme Projesi
 TravelApp
