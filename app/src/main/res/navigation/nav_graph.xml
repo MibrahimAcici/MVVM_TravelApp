@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ibrahim.travelapp.presentation.home.HomeFragment"
+        android:name="com.ibrahim.mvvm_travelapp.presentation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.ibrahim.travelapp.presentation.search.SearchFragment"
+        android:name="com.ibrahim.mvvm_travelapp.presentation.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/tripFragment"
-        android:name="com.ibrahim.travelapp.presentation.trip.TripFragment"
+        android:name="com.ibrahim.mvvm_travelapp.presentation.trip.TripFragment"
         android:label="fragment_trip"
         tools:layout="@layout/fragment_trip" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/guideFragment"
-        android:name="com.ibrahim.travelapp.presentation.guide.GuideFragment"
+        android:name="com.ibrahim.mvvm_travelapp.presentation.guide.GuideFragment"
         android:label="fragment_guide"
         tools:layout="@layout/fragment_guide" >
         <action
@@ -43,13 +43,13 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.ibrahim.travelapp.presentation.detail.DetailFragment"
+        android:name="com.ibrahim.mvvm_travelapp.presentation.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="travel"
             app:nullable="true"
-            app:argType="com.ibrahim.travelapp.domain.model.alltravel.AllTravelItem" />
+            app:argType="com.ibrahim.mvvm_travelapp.domain.model.alltravel.AllTravelItem" />
         <argument
             android:name="imageUrl"
             app:argType="string" />

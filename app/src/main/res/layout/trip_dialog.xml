@@ -12,100 +12,98 @@
         android:background="#A8A8A8"
         android:layout_gravity="center"
         android:layout_margin="@dimen/_10sdp">
-
     </View>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dialog_textinputlayout_city"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:hint="City"
-        android:textColorHint="@color/hintColor"
-        app:endIconMode="clear_text">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dialog_textinput_city"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:fontFamily="@font/source_sans_pro"
-            android:textColor="@color/black"
-            android:maxLength="30"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dialog_textinputlayout_date"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:hint="Date"
-        android:textColorHint="@color/hintColor"
-        app:endIconMode="clear_text">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dialog_textinput_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:fontFamily="@font/source_sans_pro"
-            android:textColor="@color/black"
-            android:maxLength="30"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-    android:id="@+id/dialog_textinputlayout_picture"
-    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/_20sdp"
-    android:layout_marginTop="@dimen/_20sdp"
-    android:layout_marginEnd="@dimen/_20sdp"
-    android:hint="Number of Picture"
-    android:textColorHint="@color/hintColor"
-    app:endIconMode="clear_text">
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/dialog_textinput_picture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
+        android:text="CITIES"
         android:fontFamily="@font/source_sans_pro"
         android:textColor="@color/black"
-        android:maxLength="3"
-        android:textSize="18sp" />
-</com.google.android.material.textfield.TextInputLayout>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_20sdp">
+    </TextView>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dialog_textinputlayout_day"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialog_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/dialog_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    </ProgressBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATES"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/source_sans_pro"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_20sdp">
+    </TextView>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:hint="Number of Day"
-        android:textColorHint="@color/hintColor"
-        app:endIconMode="clear_text">
+        android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dialog_textinput_day"
-            android:layout_width="match_parent"
+        <TextView
+        android:id="@+id/dialog_startingdate_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01.01.2022"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/rect_radius"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/source_sans_pro"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_25sdp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="number"
+            android:text="to"
+            android:padding="@dimen/_5sdp"
             android:fontFamily="@font/source_sans_pro"
             android:textColor="@color/black"
-            android:maxLength="3"
-            android:textSize="18sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_2sdp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/dialog_endingdate_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01.01.2022"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/rect_radius"
+            android:backgroundTint="@color/primary"
+            android:fontFamily="@font/source_sans_pro"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_2sdp">
+        </TextView>
+
+
+    </LinearLayout>
+
+
+
+
 
     <TextView
         android:id="@+id/dialog_add"
